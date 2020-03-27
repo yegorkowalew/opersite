@@ -6,6 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <p>hello</p>
+<table style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;">
+    {% for order in object_list %}
+    <tr>
+        <td style="border-bottom: 1px solid black;">{{ order.ready_status|default:"" }}</td>
+        <td style="border-bottom: 1px solid black;">{{ order.in_id|default:"" }}</td>
+        <td style="border-bottom: 1px solid black;">{{ order.couterparty|default:"" }}</td>
+        <td style="border-bottom: 1px solid black;">{{ order.product_name|default:"" }}</td>
+        <td style="border-bottom: 1px solid black;">{{ order.order_no|default:"" }}</td>
+        <td style="border-bottom: 1px solid black;">{{ order.sn_no|default:"" }}</td>
+    </tr>
+    {% endfor %}
+</table>
 </body>
 </html>

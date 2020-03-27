@@ -87,7 +87,6 @@ class Order(models.Model):
         null=True,
     )
 
-
 # * Комплектовочные
     pickup_plan_days = models.SmallIntegerField(
         verbose_name='Комплектовочные План Дней',
@@ -155,7 +154,50 @@ class Order(models.Model):
         blank=True,
         null=True,
     )
+# * Готовый заказ
+    ready_status = models.BooleanField(
+        verbose_name='Готов',
+        blank=True,
+        null=True,
+        default=False,
+    )
+    produced = models.BooleanField(
+        verbose_name='Производится',
+        blank=True,
+        null=True,
+        default=True,
+    )
+    ready_date = models.DateField(
+        verbose_name='Дата окончания',
+        blank=True,
+        null=True,
+    )
+    failure_1= models.CharField(
+        verbose_name='Отсутствие тех документации',
+        max_length=255,
+        blank=True,
+        null=True,
+    )
+    failure_2= models.CharField(
+        verbose_name='Дефицит материалов',
+        max_length=255,
+        blank=True,
+        null=True,
+    )
+    failure_3= models.CharField(
+        verbose_name='Дефицит мощностей',
+        max_length=255,
+        blank=True,
+        null=True,
+    )
+    failure_4= models.CharField(
+        verbose_name='Нет технологической возможности (аутсорс)',
+        max_length=255,
+        blank=True,
+        null=True,
+    )
 
+# * Мета
     class Meta:
         """Meta definition for OnItm."""
 
