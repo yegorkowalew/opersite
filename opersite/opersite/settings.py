@@ -59,7 +59,7 @@ ROOT_URLCONF = 'opersite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['face\\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -150,22 +150,5 @@ if myhost == 'bob':
         pass
 
 # BASE_PATH = '\\\\srv-file\\FileServer\\ПДО_Производство' 
-BASE_PATH = 'C:\\work\\opersite\\opersite\\testfiles'
+# BASE_PATH = 'C:\\work\\opersite\\opersite\\testfiles'
 
-ORDER_FILE = os.path.join(BASE_PATH, 'Служебные записки.xlsx')
-
-## Папка в которой диспетчера отмечают входящую документацию и имя файла который нужно парсить
-IN_DOCUMENT_FOLDER = os.path.join(BASE_PATH, 'График документации')
-IN_DOCUMENT_FILE = 'График документации v1.xlsx'
-
-## Папка "Учет конструкторской документации"
-TECH_DOC_FOLDER = os.path.join(BASE_PATH, 'Учет конструкторской документации')
-
-## Папка "Учет конструкторской документации" - База дефицитов
-TECH_DOC_BASE_FILE = os.path.join(TECH_DOC_FOLDER, 'База дефицитов', 'База.xlsx')
-
-## Папка "Учет конструкторской документации" - Дефициты
-TECH_DOC_DEFICIT_FOLDER = os.path.join(TECH_DOC_FOLDER, 'Дефициты')
-
-## Папка "Учет конструкторской документации" - Ежедневные отчеты
-TECH_DOC_DAILY_REPORT_FOLDER = os.path.join(TECH_DOC_FOLDER, 'Ежедневные отчеты')

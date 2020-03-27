@@ -5,8 +5,8 @@ from django.shortcuts import render
 from django.views.generic import ListView
 from baseorders.models import Order
 
-class OrderList(ListView):
-    model = Order
+# class OrderList(ListView):
+#     model = Order
 
-# def start():
-#     pass
+def start():
+    pass
